@@ -24,14 +24,12 @@ namespace TYPO3\TtAddress\Domain\Model;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-
 /**
- * The domain model of a Address
+ * The domain model of an address
  *
  * @entity
  */
-class Address extends AbstractEntity {
+class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Gender
@@ -197,13 +195,13 @@ class Address extends AbstractEntity {
 
 	/**
 	 * Address Group
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_TtAddress_Domain_Model_AddressGroup>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\TtAddress\Domain\Model\AddressGroup>
 	 */
 	protected $addressgroup;
 
 
 	public function __construct() {
-		$this->addressgroup = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->addressgroup = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -494,8 +492,9 @@ class Address extends AbstractEntity {
 	/**
 	 * sets the twitter attribute
 	 *
-	 * @param	string	 $twitter
-	 * @return	void
+	 * @param    string $twitter
+	 * @throws \InvalidArgumentException
+	 * @return    void
 	 */
 	public function setTwitter($twitter) {
 		if (substr($twitter, 0, 1) != '@') {
@@ -517,11 +516,12 @@ class Address extends AbstractEntity {
 	/**
 	 * sets the Facebook attribute
 	 *
-	 * @param	string	 $facebook
-	 * @return	void
+	 * @param    string $facebook
+	 * @throws \InvalidArgumentException
+	 * @return    void
 	 */
 	public function setFacebook($facebook) {
-		if (substr($twitter, 0, 1) != '/') {
+		if (substr($facebook, 0, 1) != '/') {
 			throw new \InvalidArgumentException('Facebook name must start with /', 1357530471);
 		}
 
@@ -730,7 +730,7 @@ class Address extends AbstractEntity {
 	/**
 	 * sets the addressgroup attribute
 	 *
-	 * @param	Tx_Extbase_Persistence_ObjectStorage<Tx_TtAddress_Domain_Model_AddressGroup>	 $addressgroup
+	 * @param	\TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\TtAddress\Domain\Model\AddressGroup>	 $addressgroup
 	 * @return	void
 	 */
 	public function setAddressgroup($addressgroup) {
@@ -740,7 +740,7 @@ class Address extends AbstractEntity {
 	/**
 	 * returns the addressgroup attribute
 	 *
-	 * @return	Tx_Extbase_Persistence_ObjectStorage<Tx_TtAddress_Domain_Model_AddressGroup>
+	 * @return	\TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\TtAddress\Domain\Model\AddressGroup>
 	 */
 	public function getAddressgroup() {
 		return $this->addressgroup;

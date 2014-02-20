@@ -24,13 +24,11 @@ namespace TYPO3\TtAddress\Domain\Repository;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Extbase\Persistence\Repository;
-
 /**
  * The repository for the domain model Address
  *
  */
-class AddressRepository extends Repository {
+class AddressRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
 
