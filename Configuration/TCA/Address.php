@@ -293,16 +293,16 @@ $TCA['tt_address'] = array (
 				'minitems'      => '0'
 			)*/
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-				'image',
-				array(
-					'appearance' => array(
-						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+					'image',
+					array(
+						'appearance' => array(
+							'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+						),
+						'minitems' => 0,
+						'maxitems' => 1
 					),
-					'minitems' => 0,
-					'maxitems' => 1
-				),
-				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-			)
+					$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+				)
 		),
 		'description' => array (
 			'exclude' => 1,

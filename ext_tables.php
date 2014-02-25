@@ -18,7 +18,7 @@ $TCA['tt_address'] = array (
 		'enablecolumns'     => array (
 			'disabled' => 'hidden'
 		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'tca.php',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'Configuration/TCA/Address.php',
 		'iconfile'          => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'ext_icon.gif',
 		'searchFields'      => 'name, first_name, middle_name, last_name, email',
 		'dividers2tabs'     => 1,
