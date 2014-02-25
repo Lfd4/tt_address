@@ -24,7 +24,7 @@ if (!defined ('TYPO3_MODE')) {
  * which glue string (comma, space, whatever)
  */
 if (TYPO3_MODE) {
-	require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('tt_address').'class.tx_ttaddress_compat.php');
+	require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('tt_address').'Classes/Hook/tx_ttaddress_compat.php');
 }
 $TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][] = 'tx_ttaddress_compat'; 
 
