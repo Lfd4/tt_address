@@ -281,28 +281,17 @@ $TCA['tt_address'] = array (
 		'image' => array (
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.image',
-			/*'config'  => array (
-				'type'          => 'group',
-				'internal_type' => 'file',
-				'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-				'max_size'      => '1000',
-				'uploadfolder'  => 'uploads/pics',
-				'show_thumbs'   => '1',
-				'size'          => '3',
-				'maxitems'      => TT_ADDRESS_MAX_IMAGES,
-				'minitems'      => '0'
-			)*/
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-					'image',
-					array(
-						'appearance' => array(
-							'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
-						),
-						'minitems' => 0,
-						'maxitems' => 1
+				'image',
+				array(
+					'appearance' => array(
+						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
 					),
-					$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-				)
+					'minitems' => 0,
+					'maxitems' => TT_ADDRESS_MAX_IMAGES
+				),
+				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+			)
 		),
 		'description' => array (
 			'exclude' => 1,

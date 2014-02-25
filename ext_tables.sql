@@ -26,7 +26,7 @@ CREATE TABLE tt_address (
   zip varchar(20) DEFAULT '' NOT NULL,
   region varchar(255) DEFAULT '' NOT NULL,
   country varchar(128) DEFAULT '' NOT NULL,
-  image tinyblob NOT NULL,
+  image varchar(255) NOT NULL,
   fax varchar(30) DEFAULT '' NOT NULL,
   deleted tinyint(3) DEFAULT '0',
   description text NOT NULL,
