@@ -4,7 +4,7 @@
         <description>language labels for tt_address FE plugin</description>
         <type>database</type>
         <csh_table></csh_table>
-        <fileId>EXT:tt_address/pi1/locallang.xml</fileId>
+        <fileId>EXT:tt_address/Resources/Private/Language/locallang.xml</fileId>
 		<labelContext type="array">
         </labelContext>
     </meta>
