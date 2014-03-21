@@ -35,6 +35,8 @@ CREATE TABLE tt_address (
   facebook varchar(50) DEFAULT '' NOT NULL,
   linkedin varchar(50) DEFAULT '' NOT NULL,
   categories int(11) DEFAULT '0' NOT NULL,
+  lat double(10,7) DEFAULT '0.00' NOT NULL,
+  lon double(10,7) DEFAULT '0.00' NOT NULL,
   PRIMARY KEY (uid),
   KEY parent (pid),
   KEY pid (pid,email)
