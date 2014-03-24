@@ -301,6 +301,22 @@ $TCA['tt_address'] = array (
 				'rows' => 5,
 				'cols' => 48
 			)
+		),
+		'lat' => array (
+			'exclude' => 1,
+			'label'   => 'LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address.latitude',
+			'config'  => array (
+				'type' => 'input',
+				'eval' => 'trim'
+			)
+		),
+		'lon' => array (
+			'exclude' => 1,
+			'label'   => 'LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address.longitude',
+			'config'  => array (
+				'type' => 'input',
+				'eval' => 'trim'
+			)
 		)
 	),
 	'types' => array (
@@ -312,6 +328,7 @@ $TCA['tt_address'] = array (
 				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.address;address_usa,
 				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.building;building,
 				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.organization;organization,
+				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.geo_data;geo_data,
 				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.contact;contact,
 				--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_tca.xml:tt_address_palette.social;social
 			')
@@ -364,6 +381,11 @@ $TCA['tt_address'] = array (
 							linkedin',
 			'canNotCollapse' => 1
 		),
+
+		'geo_data' => array(
+			'showitem' => 'lat, lon',
+			'canNotCollapse' => 1
+		)
 	)
 );
 
